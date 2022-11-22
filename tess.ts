@@ -1,10 +1,12 @@
 import { createWorker } from "./tesseract.ts";
+import { cv, Jimp } from './deps.ts'
 
 const img = Deno.readFileSync("./testimg/S3.jpg");
+const jimpSrc = await Jimp.read("./testimg/IMG_4622.JPG")
+const mat = cv.matFromImageData(jimpSrc.bitmap)
+console.log(mat.cols, mat.rows)
 
 const worker = await createWorker({
-  corePath:
-    "https://unpkg.zhimg.com/tesseract.js-core@v2.0.0/tesseract-core.wasm.js",
   langPath: "./data/",
   cachePath: "./cache/",
   logger: (m: unknown) => console.log(m),
@@ -16,7 +18,6 @@ const worker = await createWorker({
   await worker.initialize("chi_sim");
 
   const { data } = await worker.recognize(img);
-  console.log(data);
   console.log(data.text);
   await worker.terminate();
 })();
