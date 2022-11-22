@@ -2,8 +2,8 @@
 
 ## Requirement
 
-* Raspberry Pi 4
-* HDMI capture cards
+- Raspberry Pi 4
+- HDMI capture cards
 
 ```
 sudo apt update
