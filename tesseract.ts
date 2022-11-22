@@ -105,7 +105,7 @@ async function createWorker(options?: Partial<Tesseract.WorkerOptions>) {
         const worker = new DenoWorker(blobUrl, {
             type: "module",
         });
-        return worker; 
+        return worker;
     };
 
     // @ts-ignore tesseract shim here
