@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "Node16",
+        "target": "es2017"
+    },
+    "ts-node": {
+        "transpileOnly": true,
+        "esm": true
+    }
+}
