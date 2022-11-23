@@ -4,9 +4,6 @@ import { readFile } from 'fs/promises'
 import Jimp from 'jimp'
 
 const img = await readFile("./testimg/S3.jpg");
-const jimpSrc = await Jimp.read("./testimg/IMG_4622.JPG")
-const mat = cv.matFromImageData(jimpSrc.bitmap)
-console.log(mat.cols, mat.rows)
 
 const worker = await createWorker({
     langPath: "./data/",
