@@ -1,3 +1,4 @@
 node_modules/
 testimg/
 record/
+.DS_Store
