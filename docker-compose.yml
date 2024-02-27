@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  webapp:
+    build: .
+    command: ["npm", "run", "webapp"]
+  worker:
+    build: .
+    command: ["npm", "run", "worker"]
+  media-server:
+    build: .
+    command: ["npm", "run", "media-server"]

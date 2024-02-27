@@ -5,8 +5,9 @@
   "main": "src/main.ts",
   "type": "module",
   "scripts": {
-    "start": "ts-node src/main.ts",
-    "server": "ts-node src/server.ts",
+    "webapp": "ts-node src/webapp.ts",
+    "worker": "ts-node src/worker.ts",
+    "media-server": "ts-node src/media_server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
