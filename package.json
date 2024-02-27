@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/spacemeowx2/splatoon3-record-bot#readme",
   "dependencies": {
+    "fastest-levenshtein": "^1.0.16",
     "jimp": "^0.22.12",
     "node-media-server": "^2.6.2",
     "opencv-wasm": "^4.3.0-10",
