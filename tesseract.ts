@@ -99,6 +99,7 @@ async function createWorker(options?: Partial<Tesseract.WorkerOptions>) {
   // @ts-ignore global worker override
   self.Worker = function Worker() {
     const newContent = replaceWorkerScript(workerContent);
+    Deno.writeTextFileSync('debug.js', newContent)
     const blob = new Blob([newContent], { type: "text/javascript" });
     // TODO: may leak here
     const blobUrl = URL.createObjectURL(blob);

@@ -1,0 +1,31 @@
+5s
+A 0.1s
+3s
+
+X 0.5s
+0.5s
+A 0.5s
+15s
+
+A 0.1s
+Y 0.1s
+L_STICK@-010+100 4.5s
+A 0.1s
+2s
+DPAD_RIGHT 0.1s
+0.1s
+DPAD_RIGHT 0.1s
+0.1s
+DPAD_RIGHT 0.1s
+0.1s
+A 0.1s
+1s
+A 0.1s
+1s
+
+# enter code
+
+X 0.5s
+0.5s
+A 0.5s
+1s
