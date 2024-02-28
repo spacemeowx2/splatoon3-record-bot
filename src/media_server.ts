@@ -11,7 +11,7 @@ const config = {
     http: {
         port: 8000,
         allow_origin: '*'
-    }
+    },
 };
 
 var nms = new NodeMediaServer(config)
