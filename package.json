@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/spacemeowx2/splatoon3-record-bot#readme",
   "dependencies": {
+    "@types/node": "^20.11.24",
     "fastest-levenshtein": "^1.0.16",
     "jimp": "^0.22.12",
     "node-media-server": "^2.6.2",
