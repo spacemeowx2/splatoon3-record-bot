@@ -5,9 +5,9 @@
   "main": "src/main.ts",
   "type": "module",
   "scripts": {
-    "webapp": "ts-node src/webapp.ts",
-    "worker": "ts-node src/worker.ts",
-    "media-server": "ts-node src/media_server.ts",
+    "webapp": "tsx src/webapp.ts",
+    "worker": "tsx src/worker.ts",
+    "media-server": "tsx src/media_server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +26,6 @@
     "node-media-server": "^2.6.2",
     "opencv-wasm": "^4.3.0-10",
     "tesseract.js": "^5.0.5",
-    "ts-node": "^10.9.2"
+    "tsx": "^4.7.1"
   }
 }
