@@ -1,8 +1,8 @@
 import { createWorker, OEM } from 'tesseract.js'
-import { cv } from 'opencv-wasm'
-import { readFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises'
 import Jimp from 'jimp'
 import { closest } from 'fastest-levenshtein'
+import { captureImage } from './ffmpeg'
 
 const STATE_DICT = {
   '输入的代码目前尚未完成登录，\n请确认持有的代码是否正确。': 0,
@@ -27,10 +27,11 @@ async function getCenterMessage(buffer: Buffer) {
   return data.text
 }
 
-const img = await readFile('./testimg/IMG_4622.JPG')
+// const img = await readFile('./testimg/IMG_4622.JPG')
+const img = await captureImage('rtmp://127.0.0.1')
 const message = await getCenterMessage(img)
 const matched = closest(message, Object.keys(STATE_DICT))
 
-console.log(matched, STATE_DICT[matched])
+console.log(message, matched, STATE_DICT[matched])
 
 await worker.terminate()
